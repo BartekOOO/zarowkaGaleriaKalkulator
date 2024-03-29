@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Główna Strona</title>
+
+    <script>
+        var zarowkaWlaczona = false;
+        function wlaczWylaczZarowka() {
+            if (zarowkaWlaczona) {
+                zarowkaWlaczona = false;
+                document.getElementById("wlacznik").textContent = "Włącz";
+                document.getElementById("zarowka").src = "zdjecia/wylaczona.gif";
+            }
+            else {
+                zarowkaWlaczona = true;
+                document.getElementById("wlacznik").textContent = "Wyłącz";
+                document.getElementById("zarowka").src = "zdjecia/wlaczona.gif";
+            }
+        }
+
+        function hello() {
+            document.getElementById("demo").innerHTML = "Hello World!";
+        }
+
+        function font() {
+            document.getElementById("demo1").style.fontSize = '35px';
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="menu">
+        <div class="menu-item"><a href=index.html>Strona główna</a></div>
+        <div class="menu-item"><a href=strona1.html>Podstrona1</a></div>
+        <div class="menu-item"><a href=strona2.html>Podstrona2</a></div>
+    </div>
+
+    <div class="zadanie">
+        <span class="napis1">Zadanie 1</span><br>
+        <button onclick="hello()">Hello</button><br>
+        <span class="napis1" id="demo"></span><br>
+    </div>
+
+    <div class="zadanie">
+        <span class="napis1">Zadanie 2</span><br>
+        <button id="wlacznik" onclick="wlaczWylaczZarowka()">Włącz</button><br><br>
+        <img id="zarowka" src="zdjecia/wylaczona.gif"><br><br>
+    </div>
+
+    <div class="zadanie">
+        <span class="napis1">Zadanie 3</span><br>
+        <button onclick="font()">Font size</button><br>
+        <span class="napis1" id="demo1">Hello World</span><br>
+    </div>
+
+
+</body>
+
+</html>
